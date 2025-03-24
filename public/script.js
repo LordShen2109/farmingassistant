@@ -335,3 +335,40 @@ submitButton.addEventListener('click', async function() {
         submitButton.disabled = false;
     }
 });
+document.querySelector('.cta-button').addEventListener('click', function () {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+
+  document.querySelectorAll('.feature-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      const tab = card.getAttribute('data-tab');
+
+      const targetTab = (tab === 'pest') ? 'soil' : tab;
+
+      // Open the tab
+      openTab({ currentTarget: document.querySelector(`.tab-button[onclick*="${targetTab}"]`) }, targetTab);
+
+      // Scroll behavior
+      setTimeout(() => {
+        if (tab === 'pest') {
+          const soilSection = document.getElementById('soil');
+          if (soilSection) {
+            const scrollY = soilSection.offsetTop + 475; // Scroll 200px into soil section
+            window.scrollTo({
+              top: scrollY,
+              behavior: 'smooth'
+            });
+          }
+        } else {
+          // Default: scroll to top
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 300); // Adjust delay if needed
+    });
+  });
+
+
+
