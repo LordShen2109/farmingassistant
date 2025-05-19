@@ -2044,3 +2044,12 @@ body {
     color: #232323 !important;
 }
 
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    #darkModeToggle{
+        left: 120px;
+    }
+    #logout{
+        left: 0;
+        left: 1180px;
+    }
+}
