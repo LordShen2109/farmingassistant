@@ -1953,7 +1953,7 @@ body {
     color: #232323 !important;
 }
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (min-width: 1200px) and (max-width: 1420px) {
     #darkModeToggle{
         left: 120px;
     }
