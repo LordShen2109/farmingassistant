@@ -2049,7 +2049,7 @@ body {
 @media (max-width: 768px) {
     .tab-container {
         position: relative;
-        padding-top: 60px; /* Leave space for fixed header elements */
+        /* padding-top: 60px; Leave space for fixed header elements */
     }
 
     .logo-container {
@@ -2058,18 +2058,24 @@ body {
         left: 10px;
         transform: none;
         margin-bottom: 0;
+        flex-direction: column; /* Stack logo icon and text (even if text is hidden) */
+        align-items: flex-start;
+    }
+
+    .logo-text {
+        display: none; /* Hide text on smaller screens */
     }
 
     #darkModeToggle {
         position: absolute;
-        top: 10px;
-        left: 140px;
+        top: 50px; /* Below the logo image */
+        left: 10px;
         transform: none;
     }
 
     #logout {
         position: absolute;
-        top: 10px;
+        top: 50px;
         right: 10px;
         transform: none;
         font-size: 0.95rem;
@@ -2093,7 +2099,8 @@ body {
     }
 
     #darkModeToggle {
-        left: 130px;
+        left: 10px; /* Keep aligned under the logo */
+        top: 50px;
         height: 24px;
         width: 24px;
     }
