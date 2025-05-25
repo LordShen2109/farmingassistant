@@ -75,10 +75,11 @@ node server.js
 
 ### 6. Access the App
 Visit http://localhost:3000 in your browser to use the app locally.
-
+---
 ## Future Improvements
 -**Add multi-language support for regional farmers.**
 
 -**Push notifications for seasonal updates and alerts.**
 
 -**Real-time chat with agri-experts powered by AI.**
+---
